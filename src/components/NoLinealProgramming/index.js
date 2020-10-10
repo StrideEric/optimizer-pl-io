@@ -7,7 +7,7 @@ import {BsFillInfoSquareFill} from "react-icons/bs"
 
 
 
-const StockProblems = () => {   
+const NoLinealProgramming = () => {   
   return(
     <Container fluid className="App">
       <Row>
@@ -22,60 +22,60 @@ const StockProblems = () => {
             <Row className="mt-3 mx-auto">
               <Col>
                  <Link to={"carpeta"} >
-                    <UncontrolledTooltip target='button'>Programación convexa</UncontrolledTooltip>
-                    <Button size='lg' outline color="success" id='button-'> Programación convexa</Button>
+                    <UncontrolledTooltip target='button-convexa'>Programación convexa</UncontrolledTooltip>
+                    <Button size='lg' outline color="success" id='button-convexa'> Programación convexa</Button>
                 </Link>
                 <Link to={"js"} >
-                  <UncontrolledTooltip target='info-'>Más Información</UncontrolledTooltip>
-                  <BsFillInfoSquareFill id="info-" color='info' style={{color:'#17A2B8', marginLeft:10, fontSize:30}}></BsFillInfoSquareFill>
+                  <UncontrolledTooltip target='info-convexa'>Más Información</UncontrolledTooltip>
+                  <BsFillInfoSquareFill id="info-convexa" color='info' style={{color:'#17A2B8', marginLeft:10, fontSize:30}}></BsFillInfoSquareFill>
+                </Link>
+              </Col>
+            </Row>
+            <Row className="mt-3 mx-auto">
+              <Col>
+                 <Link to={"/NoLinealProgramming/ProgramacionCuadratica"}>
+                    <UncontrolledTooltip target='button-cuadratica'>Programación cuadrática</UncontrolledTooltip>
+                    <Button size='lg' outline color="success" id='button-cuadratica'> Programación cuadrática</Button>
+                </Link>
+                <Link to={"/NoLinealProgramming/ProgramacionCuadratica/info.js"} >
+                  <UncontrolledTooltip target='info-cuadratica'>Más Información</UncontrolledTooltip>
+                  <BsFillInfoSquareFill id="info-cuadratica" color='info' style={{color:'#17A2B8', marginLeft:10, fontSize:30}}></BsFillInfoSquareFill>
                 </Link>
               </Col>
             </Row>
             <Row className="mt-3 mx-auto">
               <Col>
                  <Link to={"carpeta"} >
-                    <UncontrolledTooltip target='button'>Programación cuadrática</UncontrolledTooltip>
-                    <Button size='lg' outline color="success" id='button-'> Programación cuadrática</Button>
+                    <UncontrolledTooltip target='button-geometrica'>Programación geométrica</UncontrolledTooltip>
+                    <Button size='lg' outline color="success" id='button-geometrica'> Programación geométrica</Button>
                 </Link>
                 <Link to={"js"} >
-                  <UncontrolledTooltip target='info-'>Más Información</UncontrolledTooltip>
-                  <BsFillInfoSquareFill id="info-" color='info' style={{color:'#17A2B8', marginLeft:10, fontSize:30}}></BsFillInfoSquareFill>
+                  <UncontrolledTooltip target='info-geometrica'>Más Información</UncontrolledTooltip>
+                  <BsFillInfoSquareFill id="info-geometrica" color='info' style={{color:'#17A2B8', marginLeft:10, fontSize:30}}></BsFillInfoSquareFill>
                 </Link>
               </Col>
             </Row>
             <Row className="mt-3 mx-auto">
               <Col>
                  <Link to={"carpeta"} >
-                    <UncontrolledTooltip target='button'>Programación geométrica</UncontrolledTooltip>
-                    <Button size='lg' outline color="success" id='button-'> Programación geométrica</Button>
+                    <UncontrolledTooltip target='button-estocastica'>Programación estocástica </UncontrolledTooltip>
+                    <Button size='lg' outline color="success" id='button-estocastica'> Programación estocástica </Button>
                 </Link>
                 <Link to={"js"} >
-                  <UncontrolledTooltip target='info-'>Más Información</UncontrolledTooltip>
-                  <BsFillInfoSquareFill id="info-" color='info' style={{color:'#17A2B8', marginLeft:10, fontSize:30}}></BsFillInfoSquareFill>
+                  <UncontrolledTooltip target='info-estocastica'>Más Información</UncontrolledTooltip>
+                  <BsFillInfoSquareFill id="info-estocastica" color='info' style={{color:'#17A2B8', marginLeft:10, fontSize:30}}></BsFillInfoSquareFill>
                 </Link>
               </Col>
             </Row>
             <Row className="mt-3 mx-auto">
               <Col>
                  <Link to={"carpeta"} >
-                    <UncontrolledTooltip target='button'>Programación estocástica </UncontrolledTooltip>
-                    <Button size='lg' outline color="success" id='button-'> Programación estocástica </Button>
+                    <UncontrolledTooltip target='button-combinaciones'>Método de combinaciones </UncontrolledTooltip>
+                    <Button size='lg' outline color="success" id='button-combinaciones'> Método de combinaciones </Button>
                 </Link>
                 <Link to={"js"} >
-                  <UncontrolledTooltip target='info-'>Más Información</UncontrolledTooltip>
-                  <BsFillInfoSquareFill id="info-" color='info' style={{color:'#17A2B8', marginLeft:10, fontSize:30}}></BsFillInfoSquareFill>
-                </Link>
-              </Col>
-            </Row>
-            <Row className="mt-3 mx-auto">
-              <Col>
-                 <Link to={"carpeta"} >
-                    <UncontrolledTooltip target='button'>Método de combinaciones </UncontrolledTooltip>
-                    <Button size='lg' outline color="success" id='button-'> Método de combinaciones </Button>
-                </Link>
-                <Link to={"js"} >
-                  <UncontrolledTooltip target='info-'>Más Información</UncontrolledTooltip>
-                  <BsFillInfoSquareFill id="info-" color='info' style={{color:'#17A2B8', marginLeft:10, fontSize:30}}></BsFillInfoSquareFill>
+                  <UncontrolledTooltip target='info-combinaciones'>Más Información</UncontrolledTooltip>
+                  <BsFillInfoSquareFill id="info-combinaciones" color='info' style={{color:'#17A2B8', marginLeft:10, fontSize:30}}></BsFillInfoSquareFill>
                 </Link>
               </Col>
             </Row>
@@ -88,4 +88,4 @@ const StockProblems = () => {
     </Container>
     )
     };
-export default StockProblems;
+export default NoLinealProgramming;
