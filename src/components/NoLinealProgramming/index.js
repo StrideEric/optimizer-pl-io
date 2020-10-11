@@ -61,7 +61,7 @@ const NoLinealProgramming = () => {
                     <UncontrolledTooltip target='button-estocastica'>Programación estocástica </UncontrolledTooltip>
                     <Button size='lg' outline color="success" id='button-estocastica'> Programación estocástica </Button>
                 </Link>
-                <Link to={"js"} >
+                <Link to={"/NoLinealProgramming/ProgramacionEstocastica/info.js"} >
                   <UncontrolledTooltip target='info-estocastica'>Más Información</UncontrolledTooltip>
                   <BsFillInfoSquareFill id="info-estocastica" color='info' style={{color:'#17A2B8', marginLeft:10, fontSize:30}}></BsFillInfoSquareFill>
                 </Link>
