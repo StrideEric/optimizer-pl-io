@@ -52,14 +52,66 @@ const Info = () => {
                             <li>Primer Caso</li>
                             <ul>
                             	<li>Solo aij es aleatoria para toda i y toda j</li>
+				<li>Restriccion original</li>
+                                 <Collapse isOpen={collapseHipotesis} onEntered={onEnteredHipotesis} onExited={onExitedHipotesis}> 
+                    		<MathJax.Provider>
+                        	<div>
+                            		<MathJax.Node formula={"P\\{\\sum_{j=1}^n\E\\{a_{ij}\\}*x_{j} \\leq b_{i} \\}\\geq 1-\\alpha_{i}"} />
+                        	</div>
+                    		</MathJax.Provider>
+                                <li>Restriccion transformada</li>
+				<MathJax.Provider>
+                        	<div>
+                            		<MathJax.Node formula={"\\sum_{j=1}^n\E\\{a_{ij}\\}*x_{j}+K_{\\alpha_{i}}*Y_{i} \\leq b_{i}"} />
+                        	</div>
+                    		</MathJax.Provider>
+				<MathJax.Provider>
+                        	<div>
+                            		<MathJax.Node formula={"\\sum_{j=1}^n\Var\\{a_{ij}\\}*x_{j}^2-y_{i}^2"} />
+                        	</div>
+                    		</MathJax.Provider>
+                    		
+                </Collapse>   
                             </ul>
 			    <li>Segundo Caso</li>
                             <ul>
                             	<li>Solo bi es normal con media E(bi) y varianza _var(bi) </li>
+                                <li>Restriccion original</li>
                             </ul>
+			    <MathJax.Provider>
+                        	<div>
+                            		<MathJax.Node formula={"P\\{b_{i} \\geq \\sum_{j=1}^n\E\\{a_{ij}\\}*x_{j}   \\}\\geq \\alpha_{i}"} />
+                        	</div>
+                    	     </MathJax.Provider>
+                              <ul>
+                            	<li>Restriccion transformada</li>
+                            </ul>
+				
+				<MathJax.Provider>
+                        	<div>
+                            <MathJax.Node formula={"\\sum_{j=1}^n\a_{ij}*x_{j} \\leq E\\{b_{i}\\}+K_{\\alpha_{i}}*\\sqrt{Var\\{b_{i}}\\}"} />
+                        	</div>
+                    	    </MathJax.Provider>
                             <li>Tercer Caso</li>
                             <ul>
                             	<li>Todas las aij y bi son variables normales y aleatorias</li>
+                                <li>Restriccion original</li>
+                            </ul>
+			    <MathJax.Provider>
+                        	<div>
+                            		<MathJax.Node formula={"\\sum_{j=1}^n\a_{ij}*x_{j} \\leq b_{i} "} />
+                        	</div>
+                    	    </MathJax.Provider>
+			    <ul>
+                            	<li>Restriccion transformada</li>
+                            </ul>
+			    <MathJax.Provider>
+                        	<div>
+                            		<MathJax.Node formula={"\\sum_{j=1}^n\a_{ij}*x_{j} - b_{i} \\leq 0 "} />
+                        	</div>
+                    	    </MathJax.Provider>
+			    <ul>
+                            	<li>Dado que las aij y las bi son normales además de la sumatoria, la estocástica se reduce al caso 1 y se trata de una forma similar</li>
                             </ul>
                         </ul>
                     </Collapse>
@@ -74,39 +126,26 @@ const Info = () => {
                 <Collapse isOpen={collapseFormulas} onEntered={onEnteredFormulas} onExited={onExitedFormulas}> 
                     <MathJax.Provider>
                         <div>
-                            <MathJax.Node formula={"Media = Sum(E(aij)*xj)"} />
+                            <MathJax.Node formula={"E\\{h_{i}\\}= \\sum_{j=1}^n\E\\{a_{ij}\\}*x_{j}"} />
                         </div>
                     </MathJax.Provider>
                     <MathJax.Provider>
                         <div>
-                            <MathJax.Node formula={"Varianza(hi) = X**T*Di*X"} />
+                            <MathJax.Node formula={"Var\\{h_{i}\\} = X^{T}*Di*X"} />
                         </div>
                     </MathJax.Provider>
                     <MathJax.Provider>
                         <div>
-                            <MathJax.Node formula={"hi = Sum(aij*Xj)"} />
+                            <MathJax.Node formula={"h_{i} = \\sum_{j=1}^n\a_{ij}*x_{j}"} />
                         </div>
                     </MathJax.Provider>
+                     
                     <MathJax.Provider>
                         <div>
-                            <MathJax.Node formula={"Costo Total Esperado = \\frac{D}{q}*K + b*D + \\frac{1}{2}*q*T*c1 "} />
+                            <MathJax.Node formula={"D_{i} = \\begin{bmatrix}a & b \\ c & d \\end{bmatrix}"} />
                         </div>
                     </MathJax.Provider>    
-                    <MathJax.Provider>
-                        <div>
-                            <MathJax.Node formula={"Costo Total Esperado Optimo =  b*D + \\sqrt{2*T*D*K*c1} "} />
-                        </div>
-                    </MathJax.Provider>    
-                    <MathJax.Provider>
-                        <div>
-                            <MathJax.Node formula={"q_{0} = \\sqrt{\\frac{2*K*D}{T*c1}} "} />
-                        </div>
-                    </MathJax.Provider>    
-                    <MathJax.Provider>
-                        <div>
-                            <MathJax.Node formula={"To = \\frac{T}{n_{0}} = \\frac{T*q_{0}}{D} = \\sqrt{\\frac{2*K*T}{D*c1}} "} />
-                        </div>
-                    </MathJax.Provider>
+                     
                 </Collapse>    
                 </Card>
             </Row>
@@ -118,16 +157,11 @@ const Info = () => {
 
                     <Collapse isOpen={collapseVariables} onEntered={onEnteredVariables} onExited={onExitedVariables}>
                         <ul className='text-left'>
-                            <li><b>_var: </b>Varianza</li>
+                            <li><b>Var: </b>Varianza</li>
                             <li><b>E: </b>Media aritmética</li>
                             <li><b>Di: </b>Matriz de covarianza iésima</li>
-                            <li><b>b: </b>Costo Unitario del Producto</li>
-                            <li><b>q: </b>Lote Optimo</li>
-                            <li><b>t0: </b>Tiempo que dura el lote optimo antes de agotarse</li>
-                            <li><b>CTPrep: </b>Costo Total de Preparación</li>
-                            <li><b>CTProd: </b>Costo Total propio del producto</li>
-                            <li><b>CTA: </b>Costo Total de Almacenamiento</li>
-                            <li><b>CTE: </b>Costo Total Esperado</li>
+                            <li><b>K: </b>Valor normal estándar</li>
+                            <li><b>α:</b>Nivel de significación</li>
                         </ul>
                     </Collapse>
                 </Card>
