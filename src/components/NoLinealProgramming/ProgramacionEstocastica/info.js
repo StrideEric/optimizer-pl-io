@@ -175,7 +175,7 @@ const Info = () => {
             
             
             <Row className="btn-volver justify-content-center">
-                <Link to='/StockProblems'><Button>Volver</Button></Link>
+                <Link to='/NoLinealProgramming'><Button>Volver</Button></Link>
             </Row>
           </Jumbotron>
         </Col>

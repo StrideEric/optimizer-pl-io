@@ -4,7 +4,7 @@ class Nomb extends Component {
 
     render(){
         return (
-            <h1>prueba2222</h1>
+            <h1>prueba</h1>
         )
     }
 }

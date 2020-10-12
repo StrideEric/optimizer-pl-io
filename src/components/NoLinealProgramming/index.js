@@ -57,7 +57,7 @@ const NoLinealProgramming = () => {
             </Row>
             <Row className="mt-3 mx-auto">
               <Col>
-                 <Link to={"carpeta"} >
+                 <Link to={"/NoLinealProgramming/ProgramacionEstocastica"} >
                     <UncontrolledTooltip target='button-estocastica'>Programación estocástica </UncontrolledTooltip>
                     <Button size='lg' outline color="success" id='button-estocastica'> Programación estocástica </Button>
                 </Link>
@@ -81,6 +81,7 @@ const NoLinealProgramming = () => {
             </Row>
             <Row className="btn-volver justify-content-center">
                 <Link to='/home'><Button>Volver</Button></Link>
+		
             </Row>
           </Jumbotron>
         </Col>
