@@ -40,6 +40,7 @@ import infoModeloSimpleSinAgotamiento from "./components/StockProblems/ModeloSim
 
 import ProgramacionCuadratica from "./components/NoLinealProgramming/ProgramacionCuadratica";
 import infoProgramacionCuadratica from "./components/NoLinealProgramming/ProgramacionCuadratica/info.js";
+import ProgramacionCuadraticaResult from "./components/NoLinealProgramming/ProgramacionCuadratica/result.js";
 
 import ProgramacionEstocastica from "./components/NoLinealProgramming/ProgramacionEstocastica";
 import infoProgramacionEstocastica from "./components/NoLinealProgramming/ProgramacionEstocastica/info.js";
@@ -87,6 +88,7 @@ const App = () =>
       <Route exact path="/NoLinealProgramming/ProgramacionEstocastica" component={ProgramacionEstocastica} />
 
       <Route exact path="/NoLinealProgramming/ProgramacionCuadratica/info.js" component={infoProgramacionCuadratica} />
+      <Route exact path="/NoLinealProgramming/ProgramacionCuadratica/result.js" component={ProgramacionCuadraticaResult} />
       <Route exact path="/NoLinealProgramming/ProgramacionCuadratica" component={ProgramacionCuadratica} />
 
 
